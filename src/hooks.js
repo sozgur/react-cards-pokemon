@@ -20,7 +20,10 @@ const useAxios = (url) => {
       throw new Error("Can't fetch data");
     }
   };
-  return [objs, addObj];
+
+  const clearObj = () => setObjs([]);
+
+  return [objs, addObj, clearObj];
 };
 
 export { useFlip, useAxios };
